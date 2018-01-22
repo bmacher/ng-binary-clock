@@ -1,0 +1,23 @@
+{
+  "name": "binary-clock",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Benjamin Macher",
+    "url": "https://github.com/bmacher/ng-binary-clock"
+  },
+  "files": [
+    "README",
+    "package.json",
+    "LICENSE",
+    "binary-clock.module.ts",
+    "src"
+  ],
+  "dependencies": {
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~2.4.2"
+  }
+}
