@@ -1,3 +1,8 @@
-.DS_Store
+# dependencies
 /node_modules
-/bootstrap-bg
+
+# temporary project to bootstrap the module 
+/bootstrap-bc
+
+# System Files
+.DS_Store
