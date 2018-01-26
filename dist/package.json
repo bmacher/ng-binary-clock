@@ -1,0 +1,30 @@
+{
+  "name": "ng-binary-clock",
+  "version": "0.0.1",
+  "description": "An Anguluar modul which contains a binary clock.",
+  "main": "bundles/ng-binary-clock.umd.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "keywords": [
+    "angular",
+    "angular2",
+    "binary clock",
+    "clock"
+  ],
+  "author": "Benjamin Macher",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmacher/ng-binary-clock.git"
+  },
+  "homepage": "https://github.com/bmacher/ng-binary-clock",
+  "bugs": {
+    "url": "https://github.com/bmacher/ng-binary-clock/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
+  }
+}

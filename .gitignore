@@ -2,8 +2,5 @@
 /node_modules
 package-lock.json
 
-# temporary project to bootstrap the module 
-/bootstrap-bc
-
 # System Files
 .DS_Store
