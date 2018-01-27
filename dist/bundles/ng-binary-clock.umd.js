@@ -108,28 +108,28 @@ var NgBinaryClockService = (function () {
     return NgBinaryClockService;
 }());
 
-var NgBinaryClockComponent = (function () {
-    function NgBinaryClockComponent(ngBinaryClockService) {
+var NgBinaryClock = (function () {
+    function NgBinaryClock(ngBinaryClockService) {
         this.ngBinaryClockService = ngBinaryClockService;
     }
-    NgBinaryClockComponent.prototype.ngOnInit = function () {
+    NgBinaryClock.prototype.ngOnInit = function () {
         var _this = this;
         this.timer = this.ngBinaryClockService.timer$.subscribe(function (res) { return _this.current_time = res; });
     };
-    NgBinaryClockComponent.prototype.ngOnDestory = function () {
+    NgBinaryClock.prototype.ngOnDestory = function () {
         this.timer.unsubscribe();
     };
-    NgBinaryClockComponent.decorators = [
+    NgBinaryClock.decorators = [
         { type: core.Component, args: [{
                     selector: 'ng-binary-clock',
                     styles: ["\n    .bc-wrapper {\n      display: grid;\n      grid-template-columns: repeat(6, 1fr);\n      grid-gap: 5px;\n      width: 300px;\n      height: 200px;\n      padding: 10px;\n      border-radius: 5%;\n      background-color: #000;\n    }\n    \n    .bc-wrapper > .bc-section {\n      display: grid;\n      grid-template-rows: repeat(4, 1fr);\n      grid-gap: 5px;\n    }\n    \n    .bc-wrapper > .bc-section > .bc-led-box {\n      width: 100%;\n      height: 100%;\n    }\n    \n    .bc-wrapper > .bc-section > .bc-led-box-span-2 {\n      grid-row: span 2;\n    }\n    \n    .bc-wrapper > .bc-section > .bc-led-box > span.bc-led {\n      width: 100%;\n      height: 100%;\n      display: inline-block;\n      border-radius: 50%;\n      background-color: #fff;\n    }\n    \n    .bc-wrapper > .bc-section > .bc-led-box > span.bc-led-active {\n      background-color: #007BFF;\n    },\n  "],
                     template: "\n    <!-- BINARY CLOCK -->\n    <div class=\"bc-wrapper\" *ngIf=\"current_time\" >\n      <!-- hour double digit -->\n      <div class=\"bc-section\">\n        <div class=\"bc-led-box bc-led-box-span-2\"></div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.hour[20] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.hour[10] }\"></span>\n        </div>\n      </div>\n\n      <!-- hour single digit -->\n      <div class=\"bc-section\">\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.hour[8] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.hour[4] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.hour[2] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.hour[1] }\"></span>\n        </div>\n      </div>\n\n      <!-- minute double digit -->\n      <div class=\"bc-section\">\n        <div class=\"bc-led-box\"></div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.minute[40] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.minute[20] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.minute[10] }\"></span>\n        </div>\n      </div>\n      \n      <!-- minute single digit -->\n      <div class=\"bc-section\">\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.minute[8] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.minute[4] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.minute[2] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.minute[1] }\"></span>\n        </div>\n      </div>\n\n      <!-- second double digit -->\n      <div class=\"bc-section\">\n        <div class=\"bc-led-box\"></div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.second[40] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.second[20] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.second[10] }\"></span>\n        </div>\n      </div>\n      \n      <!-- second single digit -->\n      <div class=\"bc-section\">\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.second[8] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.second[4] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.second[2] }\"></span>\n        </div>\n        <div class=\"bc-led-box\">\n          <span class=\"bc-led\" [ngClass] = \"{ 'bc-led-active': current_time.second[1] }\"></span>\n        </div>\n      </div>\n\n    </div>\n    <!-- /BINARY CLOCK -->\n  "
                 },] },
     ];
-    NgBinaryClockComponent.ctorParameters = function () { return [
+    NgBinaryClock.ctorParameters = function () { return [
         { type: NgBinaryClockService, },
     ]; };
-    return NgBinaryClockComponent;
+    return NgBinaryClock;
 }());
 
 var NgBinaryClockModule = (function () {
@@ -144,8 +144,8 @@ var NgBinaryClockModule = (function () {
     NgBinaryClockModule.decorators = [
         { type: core.NgModule, args: [{
                     imports: [common.CommonModule],
-                    declarations: [NgBinaryClockComponent],
-                    exports: [NgBinaryClockComponent]
+                    declarations: [NgBinaryClock],
+                    exports: [NgBinaryClock]
                 },] },
     ];
     NgBinaryClockModule.ctorParameters = function () { return []; };

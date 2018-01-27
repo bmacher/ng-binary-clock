@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgBinaryClockComponent } from './ng-binary-clock';
+import { NgBinaryClock } from './ng-binary-clock';
 import { NgBinaryClockService } from './ng-binary-clock.service';
 var NgBinaryClockModule = (function () {
     function NgBinaryClockModule() {
@@ -14,8 +14,8 @@ var NgBinaryClockModule = (function () {
     NgBinaryClockModule.decorators = [
         { type: NgModule, args: [{
                     imports: [CommonModule],
-                    declarations: [NgBinaryClockComponent],
-                    exports: [NgBinaryClockComponent]
+                    declarations: [NgBinaryClock],
+                    exports: [NgBinaryClock]
                 },] },
     ];
     NgBinaryClockModule.ctorParameters = function () { return []; };
