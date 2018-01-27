@@ -143,7 +143,7 @@ import { IBinaryClock } from './ng-binary-clock.interface';
   `
 })
 
-export class NgBinaryClockComponent implements OnInit {
+export class NgBinaryClock implements OnInit {
   public current_time: IBinaryClock;
   private timer: ISubscription;
 
