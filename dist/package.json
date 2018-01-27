@@ -1,6 +1,6 @@
 {
   "name": "ng-binary-clock",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An Anguluar modul which contains a binary clock.",
   "main": "bundles/ng-binary-clock.umd.js",
   "module": "index.js",
