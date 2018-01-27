@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // COMPONENT
-import { NgBinaryClockComponent } from './ng-binary-clock.component';
+import { NgBinaryClockComponent } from './ng-binary-clock';
 
 // SERVICE
 import { NgBinaryClockService } from './ng-binary-clock.service';

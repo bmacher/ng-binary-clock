@@ -13,7 +13,16 @@ let config = {
       'rxjs/add/operator/map': 'Rx.Observable.prototype',
       'rxjs/add/operator/share': 'Rx.Observable.prototype',
       'rxjs/add/observable/interval': 'Rx.Observable'
-    }
+    },
+    external: [
+      '@angular/core',
+      '@angular/common',
+      'rxjs/Observable',
+      'rxjs/Subscription',
+      'rxjs/add/operator/map',
+      'rxjs/add/operator/share',
+      'rxjs/add/observable/interval'
+    ]
   }
 }
 

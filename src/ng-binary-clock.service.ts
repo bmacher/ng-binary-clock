@@ -39,7 +39,6 @@ export class NgBinaryClockService {
     let secSingle  = +time.substr( 7 , 1 );
 
     // hour double digit
-
     if (( hourDouble - 2 ) >= 0 ) {
       binaryTime.hour[ '20' ] = true;
       hourDouble -= 2;

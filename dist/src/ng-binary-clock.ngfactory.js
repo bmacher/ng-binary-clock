@@ -1,6 +1,6 @@
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/common";
-import * as i2 from "./ng-binary-clock.component";
+import * as i2 from "./ng-binary-clock";
 import * as i3 from "./ng-binary-clock.service";
 var styles_NgBinaryClockComponent = [".bc-wrapper[_ngcontent-%COMP%] {\n      display: grid;\n      grid-template-columns: repeat(6, 1fr);\n      grid-gap: 5px;\n      width: 300px;\n      height: 200px;\n      padding: 10px;\n      border-radius: 5%;\n      background-color: #000;\n    }\n    \n    .bc-wrapper[_ngcontent-%COMP%]    > .bc-section[_ngcontent-%COMP%] {\n      display: grid;\n      grid-template-rows: repeat(4, 1fr);\n      grid-gap: 5px;\n    }\n    \n    .bc-wrapper[_ngcontent-%COMP%]    > .bc-section[_ngcontent-%COMP%]    > .bc-led-box[_ngcontent-%COMP%] {\n      width: 100%;\n      height: 100%;\n    }\n    \n    .bc-wrapper[_ngcontent-%COMP%]    > .bc-section[_ngcontent-%COMP%]    > .bc-led-box-span-2[_ngcontent-%COMP%] {\n      grid-row: span 2;\n    }\n    \n    .bc-wrapper[_ngcontent-%COMP%]    > .bc-section[_ngcontent-%COMP%]    > .bc-led-box[_ngcontent-%COMP%]    > span.bc-led[_ngcontent-%COMP%] {\n      width: 100%;\n      height: 100%;\n      display: inline-block;\n      border-radius: 50%;\n      background-color: #fff;\n    }\n    \n    .bc-wrapper[_ngcontent-%COMP%]    > .bc-section[_ngcontent-%COMP%]    > .bc-led-box[_ngcontent-%COMP%]    > span.bc-led-active[_ngcontent-%COMP%] {\n      background-color: #007BFF;\n    },"];
 var RenderType_NgBinaryClockComponent = i0.ɵcrt({ encapsulation: 0, styles: styles_NgBinaryClockComponent, data: {} });
@@ -10,4 +10,4 @@ export function View_NgBinaryClockComponent_0(_l) { return i0.ɵvid(0, [(_l()(),
 export function View_NgBinaryClockComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ng-binary-clock", [], null, null, null, View_NgBinaryClockComponent_0, RenderType_NgBinaryClockComponent)), i0.ɵdid(1, 114688, null, 0, i2.NgBinaryClockComponent, [i3.NgBinaryClockService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var NgBinaryClockComponentNgFactory = i0.ɵccf("ng-binary-clock", i2.NgBinaryClockComponent, View_NgBinaryClockComponent_Host_0, {}, {}, []);
 export { NgBinaryClockComponentNgFactory as NgBinaryClockComponentNgFactory };
-//# sourceMappingURL=ng-binary-clock.component.ngfactory.js.map
+//# sourceMappingURL=ng-binary-clock.ngfactory.js.map
