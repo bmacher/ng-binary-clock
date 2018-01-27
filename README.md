@@ -1,6 +1,8 @@
 # NgBinaryClock
 NgBinaryClock is an angular module which displays the system time as a binary clock.
 
+![NgBinaryClock](https://github.com/bmacher/ng-binary-clock/blob/master/ng-binary-clock.png?raw=true)
+
 ## Installation
 
 ```bash
